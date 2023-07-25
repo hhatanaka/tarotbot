@@ -15,8 +15,9 @@ system_prompt = """
 # st.session_stateを使いメッセージのやりとりを保存
 if "messages" not in st.session_state:
     st.session_state["messages"] = [
-        {"role": "system", "content": "あなたは、英作文や英会話、リスニングやリーディングなど、生徒の要望に合わせて英語の上達のためのアドバイスをして、生徒の英語力を向上させることができる優秀な英語を教える講師です。"}
+        {"role": "system", "content": system_prompt}
         ]
+
 
 # チャットボットとやりとりする関数
 def communicate():
